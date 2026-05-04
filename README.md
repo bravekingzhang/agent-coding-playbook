@@ -75,11 +75,11 @@ agent-coding-playbook/
 │   ├── mcp-vs-skill.md
 │   └── vibe-coding-risk-level.md
 ├── skills/
-│   ├── bug-fix/SKILL.md
-│   ├── code-review/SKILL.md
-│   ├── refactor/SKILL.md
-│   ├── release-check/SKILL.md
-│   └── test-first/SKILL.md
+│   ├── acp-bug-fix/SKILL.md
+│   ├── acp-code-review/SKILL.md
+│   ├── acp-refactor/SKILL.md
+│   ├── acp-release-check/SKILL.md
+│   └── acp-test-first/SKILL.md
 ├── checklists/
 │   ├── before-coding.md
 │   ├── before-commit.md
@@ -213,7 +213,31 @@ Agent 的总结不是事实。
 
 ## 推荐使用方式
 
-### 方式一：直接复制模板
+### 方式一：作为 Claude Code 插件安装（推荐）
+
+这个仓库本身是一个 Claude Code 插件。安装后，Skill 会按需自动触发，并附带 `/acp-init` 一键初始化项目规则。
+
+```bash
+# 在 Claude Code 中
+/plugin install bravekingzhang/agent-coding-playbook
+```
+
+或者手动 clone 后通过 marketplace 加载：
+
+```bash
+git clone https://github.com/bravekingzhang/agent-coding-playbook.git ~/.claude/plugins/agent-coding-playbook
+```
+
+安装后可用：
+
+- Skills（自动按需触发，全部带 `acp-` 命名空间避免冲突）：`acp-bug-fix`, `acp-code-review`, `acp-refactor`, `acp-release-check`, `acp-test-first`, `acp-feature-add`, `acp-investigate`, `acp-plan-task`
+- Slash command：`/acp-init` —— 在当前项目根写入 `CLAUDE.md` 模板并尝试自动检测构建/测试命令
+
+---
+
+### 方式二：直接复制模板
+
+### 方式二：直接复制模板
 
 把 `CLAUDE.md` 或 `AGENTS.md` 复制到你的项目根目录。
 
@@ -228,35 +252,35 @@ Agent 的总结不是事实。
 
 ---
 
-### 方式二：按任务加载 Skill
+### 方式三：按任务加载 Skill
 
 如果你正在修 bug，可以使用：
 
 ```text
-skills/bug-fix/SKILL.md
+skills/acp-bug-fix/SKILL.md
 ```
 
 如果你正在做 Code Review，可以使用：
 
 ```text
-skills/code-review/SKILL.md
+skills/acp-code-review/SKILL.md
 ```
 
 如果你正在发布版本，可以使用：
 
 ```text
-skills/release-check/SKILL.md
+skills/acp-release-check/SKILL.md
 ```
 
 如果你希望先写测试再实现，可以使用：
 
 ```text
-skills/test-first/SKILL.md
+skills/acp-test-first/SKILL.md
 ```
 
 ---
 
-### 方式三：把检查清单放进团队流程
+### 方式四：把检查清单放进团队流程
 
 例如 PR Review 时，可以使用：
 
@@ -320,6 +344,11 @@ The initial version includes:
 - [x] Refactor skill
 - [x] Release check skill
 - [x] Test-first skill
+- [x] Feature-add skill
+- [x] Investigate skill
+- [x] Plan-task skill
+- [x] Claude Code plugin manifest (`.claude-plugin/plugin.json`)
+- [x] `/acp-init` slash command
 - [x] Before-coding checklist
 - [x] Before-commit checklist
 - [x] PR review checklist

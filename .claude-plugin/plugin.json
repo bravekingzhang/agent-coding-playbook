@@ -1,0 +1,23 @@
+{
+  "name": "agent-coding-playbook",
+  "version": "0.1.0",
+  "description": "Engineering judgment for AI coding agents — skills, slash commands, and templates that turn principles like 'smallest correct change' and 'evidence over summary' into Claude-executable rules.",
+  "author": {
+    "name": "brzhang",
+    "url": "https://github.com/bravekingzhang"
+  },
+  "homepage": "https://github.com/bravekingzhang/agent-coding-playbook",
+  "repository": "https://github.com/bravekingzhang/agent-coding-playbook",
+  "license": "MIT",
+  "keywords": [
+    "ai-coding",
+    "skills",
+    "code-review",
+    "bug-fix",
+    "refactor",
+    "release-check",
+    "test-first",
+    "engineering-discipline",
+    "playbook"
+  ]
+}

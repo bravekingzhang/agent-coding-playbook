@@ -1,3 +1,9 @@
+---
+name: acp-test-first
+description: Use when the user asks to fix a bug, add behavior, or change behavior in a project that has a test framework, AND the change can be expressed as an observable input/output contract. Writes a failing test first, then makes the smallest change to pass it.
+version: 1.0.0
+---
+
 # Test First Skill
 
 Use this skill when the user asks to fix a bug, add behavior, or make a change that can be verified through tests.

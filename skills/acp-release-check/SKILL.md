@@ -1,3 +1,9 @@
+---
+name: acp-release-check
+description: Use before releasing, deploying, publishing, cutting a tag, or merging into a production-bound branch. Classifies risk level and audits verification evidence, rollback plan, and operational readiness — not just whether the code compiles.
+version: 1.0.0
+---
+
 # Release Check Skill
 
 Use this skill before releasing, deploying, publishing, or merging a change into a production-bound branch.

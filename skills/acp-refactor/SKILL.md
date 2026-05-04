@@ -1,3 +1,9 @@
+---
+name: acp-refactor
+description: Use when the user asks to refactor, clean up, simplify, modularize, deduplicate, rename, or improve the structure of existing code WITHOUT changing behavior. If the user wants new behavior, do not use this skill. Enforces small reversible steps and behavior preservation.
+version: 1.0.0
+---
+
 # Refactor Skill
 
 Use this skill when the user asks for refactoring, cleanup, simplification, modularization, or architecture improvement.
@@ -42,7 +48,7 @@ Before editing, identify:
 
 ### 3. Refactor in Small Steps
 
-Prefer small, reversible changes.
+Prefer small, reversible changes. For multi-step refactors, create a TodoWrite list so each step (rename, extract, move, dedupe) is tracked and can be verified independently.
 
 Good steps:
 
@@ -102,4 +108,4 @@ Stop and ask for confirmation if:
 - The refactor requires public API changes.
 - The change touches high-risk modules.
 - The diff becomes larger than expected.
-- You discover the code needs redesign rather than refactor.
+- You discover the code needs redesign rather than refactor. In this case, exit refactor mode and propose a plan via Plan Mode (ExitPlanMode) before continuing.

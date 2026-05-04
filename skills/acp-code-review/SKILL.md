@@ -1,3 +1,9 @@
+---
+name: acp-code-review
+description: Use when the user asks to review a pull request, review a diff, review changes on a branch, or audit code written by a teammate or AI agent. Reviews the diff (not the summary) for unrelated changes, missing verification, behavior risks, and over-engineering.
+version: 1.0.0
+---
+
 # Code Review Skill
 
 Use this skill when reviewing code written by humans or AI coding agents.
@@ -45,6 +51,8 @@ If the intent is unclear, ask before approving.
 For each meaningful changed block, ask:
 
 > Why is this change necessary for the stated goal?
+
+When the diff is large, prefer reading the actual `git diff` output directly rather than relying on the PR description. For cross-file impact (e.g. a renamed function), use the Explore subagent to find call sites.
 
 Flag changes that are:
 

@@ -1,3 +1,9 @@
+---
+name: acp-bug-fix
+description: Use when the user asks to fix a bug, investigate an error, debug a crash, explain a stack trace, or make a failing test pass. Enforces reproduce → isolate → smallest fix → verify, instead of guessing a cause and patching code.
+version: 1.0.0
+---
+
 # Bug Fix Skill
 
 Use this skill when the user asks you to fix a bug, investigate an error, or explain why something is failing.
@@ -42,6 +48,8 @@ If reproduction is impossible in the current environment, state that clearly.
 ### 3. Isolate the Root Cause
 
 Before editing, explain the likely root cause.
+
+For non-trivial bugs that span multiple files, use the **Explore subagent** to locate suspect call sites without polluting the main session, then read only the files actually implicated.
 
 Good root cause statements look like:
 
