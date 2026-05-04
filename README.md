@@ -67,32 +67,41 @@ agent-coding-playbook/
 ├── README.md
 ├── CLAUDE.md
 ├── AGENTS.md
+├── LICENSE
 ├── docs/
+│   ├── ai-coding-maturity-model.md
 │   ├── context-engineering.md
+│   ├── mcp-tooling-guidelines.md
 │   ├── mcp-vs-skill.md
 │   └── vibe-coding-risk-level.md
 ├── skills/
 │   ├── bug-fix/SKILL.md
 │   ├── code-review/SKILL.md
 │   ├── refactor/SKILL.md
-│   └── release-check/SKILL.md
+│   ├── release-check/SKILL.md
+│   └── test-first/SKILL.md
 ├── checklists/
 │   ├── before-coding.md
 │   ├── before-commit.md
 │   ├── high-risk-change.md
 │   └── pr-review.md
+├── examples/
+│   ├── bad-prompts.md
+│   └── good-prompts.md
 └── templates/
-    ├── claude-basic.md
     ├── agents-basic.md
+    ├── claude-basic.md
     └── skill-template.md
 ```
 
-第一版先聚焦四类资产：
+当前版本聚焦六类资产：
 
 - `CLAUDE.md`：给 Claude Code 使用的项目级行为规则；
 - `AGENTS.md`：给 Codex、Cursor、其他 coding agents 使用的通用规则；
 - `skills/`：面向具体任务的 Agent 工作流；
-- `checklists/`：给人类和 Agent 共用的检查清单。
+- `checklists/`：给人类和 Agent 共用的检查清单；
+- `docs/`：AI Coding 工程化方法说明；
+- `examples/`：好坏任务描述示例。
 
 ---
 
@@ -239,6 +248,12 @@ skills/code-review/SKILL.md
 skills/release-check/SKILL.md
 ```
 
+如果你希望先写测试再实现，可以使用：
+
+```text
+skills/test-first/SKILL.md
+```
+
 ---
 
 ### 方式三：把检查清单放进团队流程
@@ -294,15 +309,44 @@ checklists/high-risk-change.md
 
 ---
 
+## Current Status
+
+The initial version includes:
+
+- [x] Base `CLAUDE.md` rules
+- [x] Base `AGENTS.md` rules
+- [x] Bug fix skill
+- [x] Code review skill
+- [x] Refactor skill
+- [x] Release check skill
+- [x] Test-first skill
+- [x] Before-coding checklist
+- [x] Before-commit checklist
+- [x] PR review checklist
+- [x] High-risk change checklist
+- [x] Context engineering guide
+- [x] MCP vs Skill guide
+- [x] MCP tooling guidelines
+- [x] Vibe coding risk model
+- [x] AI Coding maturity model
+- [x] Good and bad prompt examples
+- [x] Basic templates for `CLAUDE.md`, `AGENTS.md`, and Skills
+
+---
+
 ## Roadmap
 
-- [ ] 完善基础 `CLAUDE.md` 和 `AGENTS.md` 模板
-- [ ] 增加更多任务型 Skills
-- [ ] 增加真实 diff review 案例
-- [ ] 增加企业级 AI Coding 风险分级
-- [ ] 增加 MCP 工具接入规范
-- [ ] 增加 AI Coding 成熟度模型
-- [ ] 增加中文公众号文章版本
+Next planned improvements:
+
+- [ ] Add real-world diff review examples
+- [ ] Add PR template for AI-generated changes
+- [ ] Add issue templates for bug fix, refactor, and release tasks
+- [ ] Add enterprise adoption guide
+- [ ] Add language-specific playbooks for TypeScript, Python, Android, and frontend projects
+- [ ] Add MCP server design examples
+- [ ] Add CI workflow examples for agent-friendly verification
+- [ ] Add metrics guide for measuring AI coding effectiveness
+- [ ] Add contribution guidelines
 
 ---
 
