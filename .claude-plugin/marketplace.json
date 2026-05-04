@@ -1,0 +1,33 @@
+{
+  "name": "acp",
+  "description": "Agent Coding Playbook marketplace — engineering discipline skills and templates for Claude Code.",
+  "owner": {
+    "name": "brzhang"
+  },
+  "plugins": [
+    {
+      "name": "agent-coding-playbook",
+      "source": "./",
+      "description": "Engineering judgment for AI coding agents — 8 skills (acp-bug-fix, acp-code-review, acp-refactor, acp-release-check, acp-test-first, acp-feature-add, acp-investigate, acp-plan-task) plus the /acp-init slash command.",
+      "version": "0.1.0",
+      "author": {
+        "name": "brzhang"
+      },
+      "homepage": "https://github.com/bravekingzhang/agent-coding-playbook",
+      "repository": "https://github.com/bravekingzhang/agent-coding-playbook",
+      "license": "MIT",
+      "keywords": [
+        "ai-coding",
+        "skills",
+        "code-review",
+        "bug-fix",
+        "refactor",
+        "release-check",
+        "test-first",
+        "engineering-discipline",
+        "playbook"
+      ],
+      "category": "engineering-practice"
+    }
+  ]
+}

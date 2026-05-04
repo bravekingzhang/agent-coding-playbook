@@ -215,17 +215,27 @@ Agent 的总结不是事实。
 
 ### 方式一：作为 Claude Code 插件安装（推荐）
 
-这个仓库本身是一个 Claude Code 插件。安装后，Skill 会按需自动触发，并附带 `/acp-init` 一键初始化项目规则。
+这个仓库本身是一个 Claude Code 插件 + marketplace。安装后，Skill 会按需自动触发，并附带 `/acp-init` 一键初始化项目规则。
+
+在 Claude Code 里执行**两步**：
 
 ```bash
-# 在 Claude Code 中
-/plugin install bravekingzhang/agent-coding-playbook
+# 1. 把本仓库注册为 marketplace（marketplace 名字叫 acp）
+/plugin marketplace add bravekingzhang/agent-coding-playbook
+
+# 2. 从 acp marketplace 安装 agent-coding-playbook 插件
+/plugin install agent-coding-playbook@acp
 ```
 
-或者手动 clone 后通过 marketplace 加载：
+> 注意：Claude Code 没有 `/plugin install user/repo` 这种一步式语法。必须先 `marketplace add`，再 `install <plugin>@<marketplace>`。
+
+本地开发或离线安装：
 
 ```bash
-git clone https://github.com/bravekingzhang/agent-coding-playbook.git ~/.claude/plugins/agent-coding-playbook
+git clone https://github.com/bravekingzhang/agent-coding-playbook.git ~/agent-coding-playbook
+# 在 Claude Code 中
+/plugin marketplace add ~/agent-coding-playbook
+/plugin install agent-coding-playbook@acp
 ```
 
 安装后可用：
